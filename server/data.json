@@ -1,0 +1,66 @@
+{
+  "links": [
+    {
+      "slug": "yt",
+      "destinationUrl": "https://www.youtube.com/watch?v=ujgnByA_6bs ",
+      "cap": null,
+      "enabled": true,
+      "clickCount": 0,
+      "createdAt": "2026-08-07T09:53:01.389Z",
+      "updatedAt": "2026-08-07T09:53:01.389Z",
+      "disabledAt": null
+    },
+    {
+      "slug": "naukri",
+      "destinationUrl": "https://www.naukri.com/job-apply-agent?notifType=new_job&cta=tuple&jobId=060826025489&sourceName=notif_center&utmTerm=JA_NC&utmContent=RealTimeV1&id=d947aafc-85fc-4655-8d28-3b1b1c676e96&createdAt=2026-08-06T16:09:06.000",
+      "cap": 1,
+      "enabled": true,
+      "clickCount": 1,
+      "createdAt": "2026-08-07T09:54:49.601Z",
+      "updatedAt": "2026-08-07T13:18:05.882Z",
+      "disabledAt": null
+    },
+    {
+      "slug": "chatgpt",
+      "destinationUrl": "https://chatgpt.com/c/6a755c8a-a494-83ee-ab2b-d23f4a714522",
+      "cap": 1,
+      "enabled": true,
+      "clickCount": 0,
+      "createdAt": "2026-08-07T13:49:53.913Z",
+      "updatedAt": "2026-08-07T13:49:53.913Z",
+      "disabledAt": null
+    },
+    {
+      "slug": "yt2",
+      "destinationUrl": "https://www.youtube.com/watch?v=2D0D8HE6uak&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=41",
+      "cap": null,
+      "enabled": true,
+      "clickCount": 0,
+      "createdAt": "2026-08-07T14:03:33.560Z",
+      "updatedAt": "2026-08-07T14:03:33.560Z",
+      "disabledAt": null
+    },
+    {
+      "slug": "yt3",
+      "destinationUrl": "ajkndkjndkjdnddswwdwv",
+      "cap": null,
+      "enabled": true,
+      "clickCount": 0,
+      "createdAt": "2026-08-07T14:04:02.153Z",
+      "updatedAt": "2026-08-07T14:04:02.153Z",
+      "disabledAt": null
+    }
+  ],
+  "clicks": {
+    "yt": [],
+    "naukri": [
+      {
+        "timestamp": "2026-08-07T09:56:20.147Z",
+        "referrer": ""
+      }
+    ],
+    "chatgpt": [],
+    "yt2": [],
+    "yt3": []
+  }
+}
