@@ -1,14 +1,22 @@
 # Decisions
 
-- Duplicate slugs are rejected with an error.
-- The redirect checks the remaining clicks before redirecting; if a link reaches the cap, subsequent visits return 410.
-- Once a link is capped, it stays visible in the list but is marked disabled.
-- Clicks-per-day are reported in the browser's local timezone.
+1.Duplicate custom slugs are not allowed and return an error.
+2.Before redirecting, the app checks if the click limit has been reached. If it has, the link returns a 410 (Gone) response.
+3.Links that reach their click limit remain visible in the dashboard but are marked as Disabled.
+4.Daily click analytics are calculated using the browser's local timezone.
 
 ## Tradeoff to revisit
 
-The current data store uses a JSON file for simplicity. With more time, I would switch to SQLite for safer concurrent writes and better querying.
+The project currently uses a JSON file to store data because it is simple and easy to set up. If I were building this for production, I would replace it with SQLite (or another database) to handle concurrent writes safely and improve query performance.
 
 ## AI usage
 
-I used AI assistance to scaffold the project structure and implement the backend/frontend integration quickly.
+I used AI to speed up the initial project setup and to help connect the React frontend with the Express backend. All features were reviewed, integrated, and tested before finalizing the project.
+
+## Implementation summary
+
+The application is built as a React single-page application (SPA) with an Express.js backend. Users can create and manage short links, enable or disable them, track click analytics, search through links, and view detailed statistics for each short URL. The implementation focuses on being simple, lightweight, and easy to run locally without requiring external services.n fast, lightweight, and easy to run locally without external infrastructure.
+
+## Project decision rationale
+
+Using a JSON file for storage made development faster and kept the project easy to understand. However, this approach is not suitable for larger applications because it does not handle multiple users or frequent writes efficiently. For a production-ready version, I would use a database like SQLite to improve reliability, scalability, and data management.
