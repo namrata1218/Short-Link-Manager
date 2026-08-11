@@ -4,6 +4,7 @@ function CreateLinkForm({ form, message, onFormChange, onSubmit }) {
       <h1>Short Link Manager</h1>
       <p>Create and track campaign links from one place.</p>
 
+      {/* The form posts destination URL, optional slug, and optional cap to the API. */}
       <form onSubmit={onSubmit} className="form-card">
         <label>
           Destination URL

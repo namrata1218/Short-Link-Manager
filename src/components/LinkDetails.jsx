@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 function LinkDetails({ selectedLink, selectedSummary, isLoading, onToggle, onDelete }) {
+  // Allows the destination URL in the details card to shrink to one-line ellipsis and expand on demand.
   const [expandedUrl, setExpandedUrl] = useState(false);
 
   return (

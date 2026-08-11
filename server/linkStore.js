@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// A small in-process store that reads and writes the app's JSON persistence file.
 function createLinkStore(dbPath = path.join(__dirname, 'data.sqlite')) {
   const dataDir = path.dirname(dbPath);
   if (!fs.existsSync(dataDir)) {
@@ -36,6 +37,7 @@ function createLinkStore(dbPath = path.join(__dirname, 'data.sqlite')) {
     fs.writeFileSync(dbPath, JSON.stringify(payload, null, 2));
   }
 
+  // Creates one link record and stores the initial link metadata plus empty click history.
   function createLink({ destinationUrl, slug, cap = null }) {
     if (!destinationUrl || !slug) {
       throw new Error('Destination URL and slug are required');
@@ -84,6 +86,7 @@ function createLinkStore(dbPath = path.join(__dirname, 'data.sqlite')) {
     };
   }
 
+  // Records a redirect visit, updates clickCount, appends click metadata, and enforces cap rules.
   function recordClick(slug, referrer = '') {
     const link = links.get(slug);
     if (!link) {

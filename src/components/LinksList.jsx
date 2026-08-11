@@ -1,8 +1,10 @@
 import { useState } from 'react';
 
 function LinksList({ links, total, page, search, selectedSlug, onSearchChange, onPageChange, onSelectLink }) {
+  // Expand/collapse the visible list on the current page.
   const [showAll, setShowAll] = useState(false);
 
+  // The UI intentionally keeps a compact first impression and expands only when requested.
   const displayedLinks = showAll ? links : links.slice(0, 2);
   const hasMore = links.length > 2;
 

@@ -3,9 +3,11 @@ import CreateLinkForm from './components/CreateLinkForm';
 import LinksList from './components/LinksList';
 import LinkDetails from './components/LinkDetails';
 
+// Backend API base used by all fetch calls from the React UI.
 const API_BASE = 'http://localhost:3001/api';
 
 function App() {
+  // Shared page-level state for the dashboard panels.
   const [links, setLinks] = useState([]);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
@@ -16,6 +18,7 @@ function App() {
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  // Fetches one paged slice of links based on search and current page.
   const loadLinks = async () => {
     try {
       const response = await fetch(`${API_BASE}/links?search=${encodeURIComponent(search)}&page=${page}&limit=5`);
@@ -33,6 +36,7 @@ function App() {
     loadLinks();
   }, [search, page]);
 
+  // Transform the currently selected detail record into the field layout used by the details panel.
   const selectedSummary = useMemo(() => {
     return selectedLink ? [
       { label: 'Slug', value: selectedLink.slug },
@@ -43,6 +47,7 @@ function App() {
     ] : [];
   }, [selectedLink]);
 
+  // POST a new link payload to the API, then refresh page one and reload the table.
   const handleCreate = async (event) => {
     event.preventDefault();
     const payload = {
