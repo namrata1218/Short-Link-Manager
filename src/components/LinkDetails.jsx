@@ -47,6 +47,18 @@ function LinkDetails({ selectedLink, selectedSummary, isLoading, onToggle, onDel
           </div>
 
           <div className="details-card">
+            <h3>Clicks per day (last 7 days, UTC)</h3>
+            <ul className="daily-clicks-list">
+              {(selectedLink.dailyClicks || []).map((day) => (
+                <li key={day.date}>
+                  <span>{day.date}</span>
+                  <strong>{day.count} {day.count === 1 ? 'click' : 'clicks'}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="details-card">
             <h3>Recent Activity</h3>
             {selectedLink.clicks && selectedLink.clicks.length > 0 ? (
               <ul className="clicks-list">

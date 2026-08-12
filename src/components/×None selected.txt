@@ -1,0 +1,137 @@
+×None selected
+
+Skip to content
+Using Gmail with screen readers
+in:sent 
+1 of 275
+SDE Intern – Technical Assignment | Submission within 3 Days
+Inbox
+
+vaibhav uix <vaibhav@uixlabs.in>
+Attachments
+Thu, Aug 6, 2:26 PM (6 days ago)
+to me, Anantika
+
+Hi Namrata,
+Hope you are doing well.
+
+Thank you for your interest in the SDE Intern position at UIX Labs. We were impressed with your profile and would like to move forward with the next step in our selection process.
+
+Please find the technical assignment attached.
+
+Submission Deadline: Please complete and submit the assignment within 3 days of receiving this email. 
+
+Submission Instructions: 
+- Reply to this email with your completed assignment (or share the GitHub repository / Google Drive link ).  
+- Ensure your code is well-structured, includes necessary comments, and has a clear README explaining how to run it.
+
+If you have any questions regarding the assignment, feel free to reply to this email. We look forward to reviewing your submission.
+
+
+Vaibhav Bhatnagar
+Founder's Office - Growth Manager 
+Gurgaon, HR
++91-8791846601
+LinkedIn | Website | Book a Meeting 
+
+
+ One attachment
+  •  Scanned by Gmail
+
+Namrata Shakya <shakyanamrata18@gmail.com>
+Aug 8, 2026, 9:09 PM (4 days ago)
+to vaibhav
+
+Hi,
+
+I have completed the assignment as requested and have shared it for your review.
+
+Please find the submission link below:
+ https://share.google/Cc5uigQBQZdcfYwus
+
+Kindly review it and let me know if you need any additional information or changes.
+
+Thank you for the opportunity.
+
+Best regards,
+Namrata Shakya
+# Full-Stack Intern Take-Home — Short Link Manager
+
+**~5 hours of work. Submit within 3 days.**
+
+Build an internal tool for a marketing team: they paste in long campaign URLs, get short
+links back, and later check how those links performed. You'll build the API and a React UI.
+
+## Example
+
+| Destination URL | Options given | Resulting short link |
+|---|---|---|
+| `https://shop.example.com/collections/summer-2026/sale?utm_source=newsletter&utm_medium=email&utm_campaign=summer_sale_26` | none | `http://localhost:3000/r/k7Bx9q` |
+| `https://blog.example.com/posts/how-we-cut-our-build-time-by-80-percent` | slug `build-time` | `http://localhost:3000/r/build-time` |
+| `https://example.com/webinar/register?id=99321&ref=partner` | slug `webinar`, cap `500` | `http://localhost:3000/r/webinar` |
+
+Visiting `http://localhost:3000/r/build-time` sends the visitor to the blog post and
+logs a click. Once `/r/webinar` has served 500 clicks, it stops redirecting and returns
+410 instead.
+
+Host and port are whatever your app runs on — there's no domain to configure.
+
+## What it does
+
+1. **Create a link** — destination URL, optional custom slug, optional click cap.
+2. **`GET /r/:slug`** — redirect to the destination and record the click (timestamp +
+   referrer). If the cap is hit or the link is disabled, return **410 Gone** instead.
+3. **List view** — search and pagination, both handled server-side. Show status and click count.
+4. **Detail view** — clicks per day for the last 7 days.
+5. **Disable or delete** a link.
+
+No auth, no deployment — assume one trusted user, running locally.
+
+## Stack
+
+React (TypeScript preferred). Backend in Node or Python, framework your choice. Any
+database.
+
+## Decide these yourself
+
+Left unspecified on purpose. Pick an answer, implement it, explain it in `DECISIONS.md`:
+
+- A custom slug that's already taken
+- Cap checked before or after the redirect — and what happens when two people click the
+  last remaining click at the same moment
+- Whether stats stay visible once a link is capped
+- Timezone for "clicks per day"
+
+## Optional bonus: one AI feature
+
+Either slug suggestions generated from the destination page's title, or a plain-English
+summary of the 7-day click data.
+
+Free keys from [OpenRouter](https://openrouter.ai) (any `:free` model) or
+[Google AI Studio](https://aistudio.google.com/apikey). The key stays server-side in an
+env var, commit a `.env.example`, and **the app must work with no key set** — we'll run
+it that way.
+
+Skipping this costs you nothing.
+
+## Submit
+
+A **GitHub repo link**, containing:
+
+- **`README.md`** — how to run it. Clone to working app in under 5 minutes.
+- **`DECISIONS.md`** — your four answers above, one tradeoff you'd revisit with more time,
+  anything unfinished, and how you used AI.
+- **Optional:** a 3–5 minute screen recording walking through what you built. Unpolished
+  is fine.
+
+Push as you go rather than one commit at the end.
+
+## On AI tools
+
+Use them — just note what you used in `DECISIONS.md`. If we move forward, we'll spend
+20 minutes together adding a small feature to your repo, live, so make sure you can
+explain and extend everything you submit.
+
+Unfinished and documented beats broken and unmentioned. Good luck.
+fullstack-intern-takehome.md
+Displaying fullstack-intern-takehome.md.

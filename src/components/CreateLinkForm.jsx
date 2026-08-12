@@ -1,4 +1,4 @@
-function CreateLinkForm({ form, message, onFormChange, onSubmit }) {
+function CreateLinkForm({ form, message, createdShortUrl, onFormChange, onSubmit }) {
   return (
     <section className="panel">
       <h1>Short Link Manager</h1>
@@ -36,6 +36,7 @@ function CreateLinkForm({ form, message, onFormChange, onSubmit }) {
       </form>
 
       {message ? <p className="message">{message}</p> : null}
+      {createdShortUrl ? <a className="short-url" href={createdShortUrl} target="_blank" rel="noreferrer">{createdShortUrl}</a> : null}
     </section>
   );
 }

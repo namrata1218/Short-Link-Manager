@@ -49,6 +49,16 @@
       "createdAt": "2026-08-07T14:04:02.153Z",
       "updatedAt": "2026-08-07T14:04:02.153Z",
       "disabledAt": null
+    },
+    {
+      "slug": "hero",
+      "destinationUrl": "https://www.w3schools.com/react/react_first_app.asp",
+      "cap": null,
+      "enabled": true,
+      "clickCount": 3,
+      "createdAt": "2026-08-12T14:55:28.444Z",
+      "updatedAt": "2026-08-12T14:56:08.752Z",
+      "disabledAt": null
     }
   ],
   "clicks": {
@@ -61,6 +71,20 @@
     ],
     "chatgpt": [],
     "yt2": [],
-    "yt3": []
+    "yt3": [],
+    "hero": [
+      {
+        "timestamp": "2026-08-12T14:55:31.910Z",
+        "referrer": ""
+      },
+      {
+        "timestamp": "2026-08-12T14:55:55.872Z",
+        "referrer": ""
+      },
+      {
+        "timestamp": "2026-08-12T14:56:08.752Z",
+        "referrer": ""
+      }
+    ]
   }
 }

@@ -26,7 +26,7 @@ Open the app at http://localhost:5173.
 - Enable or disable a link and delete it from the list.
 - Search links by slug or destination URL.
 - Paginate through links from the API.
-- View detail statistics such as slug, destination URL, status, click count, cap, and recent activity.
+- View detail statistics such as slug, destination URL, status, click count, cap, recent activity, and UTC clicks-per-day for the last seven days.
 
 
 ## Tech stack
@@ -44,21 +44,17 @@ Open the app at http://localhost:5173.
 npm install
 ```
 
-2. Start the API server:
-
-```bash
-node server/index.js
-```
-
-3. Start the Vite frontend:
+2. Start the frontend and API server together:
 
 ```bash
 npm run dev
 ```
 
-4. Open the Vite app in the browser at:
+3. Open the Vite app in the browser at:
 
 http://localhost:5173
+
+To run the services separately, use `npm run server` for the API and `npm run client` for Vite.
 
 ## API
 

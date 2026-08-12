@@ -204,6 +204,11 @@ button:disabled {
   color: #1f7a4a;
 }
 
+.short-url {
+  color: #1a5fb4;
+  overflow-wrap: anywhere;
+}
+
 /* Details Panel Enhancements */
 .details-header {
   display: flex;
@@ -315,6 +320,23 @@ button:disabled {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.daily-clicks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.daily-clicks-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.daily-clicks-list li:last-child {
+  border-bottom: 0;
 }
 
 .click-item {

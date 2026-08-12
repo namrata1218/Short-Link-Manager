@@ -16,6 +16,7 @@ function App() {
   const [selectedLink, setSelectedLink] = useState(null);
   const [form, setForm] = useState({ destinationUrl: '', slug: '', cap: '' });
   const [message, setMessage] = useState('');
+  const [createdShortUrl, setCreatedShortUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   // Fetches one paged slice of links based on search and current page.
@@ -65,10 +66,12 @@ function App() {
       const data = await response.json();
       if (response.ok) {
         setMessage(`Created ${data.slug}`);
+        setCreatedShortUrl(data.shortUrl);
         setForm({ destinationUrl: '', slug: '', cap: '' });
         setPage(1);
         loadLinks();
       } else {
+        setCreatedShortUrl('');
         setMessage(data.error || 'Unable to create link');
       }
     } catch (error) {
@@ -132,6 +135,7 @@ function App() {
       <CreateLinkForm
         form={form}
         message={message}
+        createdShortUrl={createdShortUrl}
         onFormChange={setForm}
         onSubmit={handleCreate}
       />

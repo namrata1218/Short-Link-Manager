@@ -28,7 +28,10 @@ app.post('/api/links', (req, res) => {
   try {
     const { destinationUrl, slug, cap } = req.body;
     const created = store.createLink({ destinationUrl, slug, cap });
-    res.status(201).json(created);
+    res.status(201).json({
+      ...created,
+      shortUrl: `${req.protocol}://${req.get('host')}/r/${created.slug}`,
+    });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -40,7 +43,8 @@ app.get('/api/links/:slug', (req, res) => {
     return res.status(404).json({ error: 'Link not found' });
   }
   const clicks = store.getClicks(req.params.slug);
-  return res.json({ ...link, clicks });
+  const dailyClicks = store.getDailyClickCounts(req.params.slug);
+  return res.json({ ...link, clicks, dailyClicks });
 });
 
 app.patch('/api/links/:slug', (req, res) => {
