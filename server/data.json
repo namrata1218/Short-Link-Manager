@@ -59,6 +59,16 @@
       "createdAt": "2026-08-12T14:55:28.444Z",
       "updatedAt": "2026-08-12T14:56:08.752Z",
       "disabledAt": null
+    },
+    {
+      "slug": "man",
+      "destinationUrl": "https://www.w3schools.com/react/react_first_app.asp",
+      "cap": null,
+      "enabled": true,
+      "clickCount": 0,
+      "createdAt": "2026-08-12T15:07:44.380Z",
+      "updatedAt": "2026-08-12T15:07:44.380Z",
+      "disabledAt": null
     }
   ],
   "clicks": {
@@ -85,6 +95,7 @@
         "timestamp": "2026-08-12T14:56:08.752Z",
         "referrer": ""
       }
-    ]
+    ],
+    "man": []
   }
 }

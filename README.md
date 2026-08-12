@@ -6,17 +6,28 @@ A full-stack short link manager for creating, tracking, searching, enabling, dis
 
 https://github.com/namrata1218/Short-Link-Manager_
 
-## Clone and run
+## Run locally
+
+### Requirements
+
+- Node.js 18 or newer
+- npm
+
+### Installation
 
 ```bash
 git clone https://github.com/namrata1218/Short-Link-Manager_.git
 cd Short-Link-Manager_
 npm install
-node server/index.js
 npm run dev
 ```
 
-Open the app at http://localhost:5173.
+`npm run dev` starts both services:
+
+- Website: http://localhost:5173
+- API and short-link redirects: http://localhost:3001
+
+Open http://localhost:5173 in your browser. Stop both services with `Ctrl + C` in the terminal.
 
 ## What this app does
 
@@ -36,25 +47,30 @@ Open the app at http://localhost:5173.
 - JSON file data persistence
 - Node.js runtime
 
-## How to run locally
+## How to use the website
 
-1. Install dependencies:
+1. In **Destination URL**, paste a valid `http` or `https` link.
+2. Optionally enter a **Custom slug**. Leave it blank to generate a unique short slug automatically.
+3. Optionally set a **Click cap**. Once the cap is reached, later visits receive `410 Gone`.
+4. Select **Create link**. Copy or open the short URL shown below the form.
+5. Select a link in the list to view its destination, status, total clicks, the last seven days of daily clicks, and recent referrers.
+6. Use the search field to search by slug or destination URL. Use **Prev** and **Next** to move through result pages.
+7. In the detail panel, select **Disable** to stop redirects, **Enable** to restore an uncapped link, or **Delete** to remove it permanently.
+
+## Run services separately
+
+If needed, run the frontend and backend in different terminals:
 
 ```bash
-npm install
+npm run server
 ```
-
-2. Start the frontend and API server together:
 
 ```bash
-npm run dev
+npm run client
 ```
 
-3. Open the Vite app in the browser at:
 
-http://localhost:5173
-
-To run the services separately, use `npm run server` for the API and `npm run client` for Vite.
+The frontend requires the backend to be running on port `3001`.
 
 ## API
 
